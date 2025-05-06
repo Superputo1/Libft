@@ -6,7 +6,7 @@
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:16:58 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/04/21 16:10:17 by vpinto-g         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:42:54 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s);
-	while (i > 0)
+	if ((char)c == '\0')
+	{
+		return ((char *)&s[i]);
+	}
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 		{
@@ -25,16 +29,13 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		i--;
 	}
-	if ((char)c == '\0')
-	{
-		return ((char *)&s[i]);
-	}
 	return (NULL);
 }
+
 /* int main (void)
 {
-	int c = '\0';
-	const char *s = "\0";
+	int c = 'o';
+	const char *s = "bola";
 
-	printf("%s", ft_strchr(s, c));
+	printf("%s", ft_strrchr(s, c));
 } */

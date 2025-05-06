@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 13:09:51 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/05/06 16:36:51 by vpinto-g         ###   ########.fr       */
+/*   Created: 2025/05/04 15:19:09 by vpinto-g          #+#    #+#             */
+/*   Updated: 2025/05/06 15:03:46 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int	i;
+	char			*res;
 
+	res = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!res)
+		return (NULL);
 	i = 0;
-	if (size != 0)
+	while (s[i] != '\0')
 	{
-		while (src[i] && i < size - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		res[i] = f(i, s[i]);
+		i++;
 	}
-	return (ft_strlen(src));
+	res[i] = '\0';
+	return (res);
 }

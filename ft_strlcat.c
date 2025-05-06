@@ -6,26 +6,26 @@
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:12:48 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/04/23 12:24:46 by vpinto-g         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:01:36 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-size_t srclen;
-size_t destlen;
-size_t i;
+	size_t	srclen;
+	size_t	destlen;
+	size_t	i;
 
-i = 0;
-srclen = ft_strlen(src);
-destlen = ft_strlen(dest);
-if (size <= destlen)
-return (srclen + size);
-else
-ft_strlcpy(&dest[destlen], src, (size - destlen));
-return (destlen + srclen);
+	i = 0;
+	srclen = ft_strlen(src);
+	destlen = ft_strlen(dest);
+	if (size <= destlen)
+		return (srclen + size);
+	else
+		ft_strlcpy (&dest[destlen], src, (size - destlen));
+	return (destlen + srclen);
 }
 
 /* int main()

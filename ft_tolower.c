@@ -6,13 +6,13 @@
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:09:10 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/04/21 15:13:41 by vpinto-g         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:09:06 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{

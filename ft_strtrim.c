@@ -6,13 +6,13 @@
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 17:37:37 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/04/29 15:52:22 by vpinto-g         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:07:45 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;

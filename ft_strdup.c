@@ -6,17 +6,17 @@
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:52:07 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/05/01 17:15:21 by vpinto-g         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:58:53 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	size_t i;
-	char *l;
-	
+	size_t	i;
+	char	*l;
+
 	i = 0;
 	while (s[i] != '\0')
 	{

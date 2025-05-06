@@ -6,15 +6,15 @@
 /*   By: vpinto-g <vpinto-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 09:51:18 by vpinto-g          #+#    #+#             */
-/*   Updated: 2025/05/01 17:14:17 by vpinto-g         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:22:03 by vpinto-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = n;
 	if (dest == src)
